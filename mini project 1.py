@@ -3,9 +3,11 @@ class Library:
     def __init__(self,books,name):
         self.list_of_books=books
         self.library_name=name
+        self.dict={}
 
     def display(self):
-        print(self.list_of_books)
+        for books in self.list_of_books:
+            print(books)
 
 
     def add(self,book):
@@ -13,8 +15,8 @@ class Library:
         print('book added')
 
 
-    def return_book(self,bppk):
-        self.list_of_books.append(book)
+    def return_book(self,book):
+        self.dict.pop(book)
         print('book returned')
 
 
