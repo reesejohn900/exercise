@@ -21,24 +21,24 @@ class Library:
 
 
     def lend(self):
-        d={}
+      
         a=input('enter the book')
         b=self.list_of_books
         if a  in b:
             c=input('enter the name of the person')
-            d[a]=c
+            self.dict[a]=c
             b.remove(a)
 
         elif a  in d:
             print('book is lended by :')
-            print(d[a])
+            print(self.dict[a])
 
         else:
             print('book is not in the library')
 
         e=int(input('1:printing dictonary\n'))
         if e == 1:
-            print(d)
+            print(self.dict)
 
         else:
             print('wrong choice')
